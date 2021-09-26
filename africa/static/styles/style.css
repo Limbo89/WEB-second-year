@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 4%;
+  box-sizing: border-box;
+  align-items: center;
+}
+header .logo {
+  flex-basis: 40%;
+}
+.horizontal-menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.horizontal-menu > li:not(:last-child) {
+  margin-right: 26px;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  top: 120px;
+  display: flex;
+  align-items: center;
+  height: ;
+  height: calc(100vh - 120px);
+}
+main .article {
+  flex-basis: 40%;
+}
+main .gallery-cards {
+  height: 100%;
+}
+main .gallery-cards .gallery {
+  height: 80%;
+  display: flex;
+}
+main .gallery-cards .gallery .card {
+  margin-right: 60px;
+}
+main .controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
