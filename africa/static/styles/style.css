@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #b1c0dd;
+  background-size: 100%;
 }
 header {
   width: 100%;
@@ -14,6 +18,14 @@ header {
 }
 header .logo {
   flex-basis: 40%;
+}
+header .sidebar {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+header .sidebar .search input {
+  display: none;
 }
 .horizontal-menu {
   display: flex;
@@ -32,8 +44,9 @@ main {
   align-items: center;
   height: calc(100vh - 120px);
 }
-main .article {
-  flex-basis: 40%;
+main article {
+  width: 420px;
+  margin-right: 80px;
 }
 main .gallery-cards {
   height: 100%;
@@ -41,12 +54,51 @@ main .gallery-cards {
 main .gallery-cards .gallery {
   height: 80%;
   display: flex;
+  margin-bottom: 60px;
 }
 main .gallery-cards .gallery .card {
   margin-right: 60px;
+  height: 100%;
+  width: 280px;
+}
+main .gallery-cards .gallery .card:not(:first-child) {
+  transform: scale(0.9);
 }
 main .controls {
-  width: 100%;
+  width: 700px;
   display: flex;
   justify-content: space-between;
+}
+.card-photo {
+  height: 80%;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.card-photo img {
+  position: absolute;
+  width: 100%;
+  top: -120px;
+}
+.fav {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 15px;
+  border-radius: 1000px;
+  border: none;
+  background-image: url(../images/6.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card-count {
+  display: flex;
+  align-items: center;
+}
+.card-count .line {
+  height: 1px;
+  width: 80px;
+  background-color: #1e2022;
+  margin: 0px 6 px;
 }
